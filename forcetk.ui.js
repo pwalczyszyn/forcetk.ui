@@ -66,10 +66,12 @@
                 var that = this;
                 this.client.setRefreshToken(encodeURIComponent(refreshToken));
                 this.client.refreshAccessToken(
-                    function refreshAccessToken_successHandler() {
+                    function refreshAccessToken_successHandler(sessionToken) {
 
-                        if (that.successCallback)
+                        if (that.successCallback) {
+                            that.client.setSessionToken(sessionToken.access_token, null, sessionToken.instance_url);
                             that.successCallback.call(that, that.client);
+                        }
                         else
                             console.log('INFO: OAuth login successful!')
 
