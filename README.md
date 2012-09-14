@@ -3,6 +3,12 @@
 
 For testing and debugging purposes forcetk.ui will also work in a desktop Safari browser, instead of ChildBrowser plugin it will use popup window.
 
+## Usage
+
+To use this library you will need a Salesforce.com account. For development purposes you can signup for a free developer account [here](http://developer.force.com).
+
+Another thing you will need is to enable remote access, this can be done by navigating to Setup > Develop > Remote Access and adding new Remote Access Application configuration.
+
 ```html
 <!DOCTYPE html>
 <html>
