@@ -1,4 +1,4 @@
 ## Description
-**forcetk.ui** is an extension for [forcetk.js](https://github.com/developerforce/Force.com-JavaScript-REST-Toolkit) library (from Salesforce team). In a nutshell *forcetk.js* implements client side OAuth mechanizm to connect to force.com REST services. Where **forcetk.ui** provides a simple UI layer when building mobile apps with [PhoneGap](http://phonegap.com)/[Cordova](http://incubator.apache.org/cordova/) and ChildBrowser plugin. 
+**forcetk.ui** is an extension for [forcetk.js](https://github.com/developerforce/Force.com-JavaScript-REST-Toolkit) library (from Salesforce team). In a nutshell *forcetk.js* implements client side OAuth mechanizm to connect to force.com REST services. Where **forcetk.ui** provides a simple UI layer when building mobile apps with [PhoneGap](http://phonegap.com)/[Cordova](http://incubator.apache.org/cordova/) and ChildBrowser plugin (which can be found [here](https://github.com/phonegap/phonegap-plugins) for different platforms). 
 
 For testing and debugging purposes forcetk.ui will also work in a desktop Safari browser, instead of ChildBrowser plugin it will use popup window.
