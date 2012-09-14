@@ -3,9 +3,10 @@
 
 For testing and debugging purposes forcetk.ui will also work in a desktop Safari browser, instead of ChildBrowser plugin it will use popup window.
 
-    <!DOCTYPE html>
-    <html>
-    <head>
+```html
+<!DOCTYPE html>
+<html>
+<head>
     <title>forcetk.ui demo</title>
 
     <script type="text/javascript" src="scripts/libs/jquery-1.8.1.js"></script>
@@ -19,10 +20,10 @@ For testing and debugging purposes forcetk.ui will also work in a desktop Safari
             // Salesforce login URL
             var loginURL = 'https://login.salesforce.com/',
 
-            // Salesforce consumer key
-                    consumerKey = '3MVG9y6x0357HledFmmKitP_D1Kw1SW0YTpmK_.icZKxZebnHvLydZyWo9dsKWc_zYxeYzAF_RLG1pGtauqA6',
+            // Consumer Key from Setup | Develop | Remote Access
+                    consumerKey = 'CONSUMER_KEY',
 
-            // Salesforce callback URL
+            // Callback URL from Setup | Develop | Remote Access
                     callbackURL = 'https://login.salesforce.com/services/oauth2/success',
 
             // Instantiating forcetk ClientUI
@@ -41,10 +42,11 @@ For testing and debugging purposes forcetk.ui will also work in a desktop Safari
 
     </script>
 
-    </head>
-    <body>
+</head>
+<body>
 
-    <button id="btnLogin" onclick="login()">Login</button>
+<button id="btnLogin" onclick="login()">Login</button>
 
-    </body>
-    </html>
+</body>
+</html>
+```
