@@ -7,7 +7,7 @@ For testing and debugging purposes forcetk.ui will also work in a desktop Safari
 
 To use this library you will need a Salesforce.com account. For development purposes you can signup for a free developer account [here](http://developer.force.com).
 
-Another thing you will need is to enable remote access, this can be done by navigating to Setup > Develop > Remote Access and adding new Remote Access Application configuration.
+Another thing you will need is to enable remote access, this can be done by navigating to Setup > Develop > Remote Access and adding new Remote Access Application configuration of your Force.com account.
 
 ```html
 <!DOCTYPE html>
