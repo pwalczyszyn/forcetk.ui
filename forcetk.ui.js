@@ -151,6 +151,8 @@
                         + ',left=' + centeredX + ',top=' + centeredY);
 
                 if (loginWindow) {
+                    // As per http://docs.phonegap.com/en/2.3.0/cordova_inappbrowser_inappbrowser.md.html, 
+                    // now loadStart & loadStop events are supported, so moving to event listener rather than timer.
                     loginWindow.addEventListener('loadstop', function(event) {                     
                         var loc = event.url;
                         if (typeof loc !== 'undefined' && loc.indexOf(that.callbackURL) == 0) {
