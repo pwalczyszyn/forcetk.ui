@@ -151,23 +151,16 @@
                         + ',left=' + centeredX + ',top=' + centeredY);
 
                 if (loginWindow) {
-                    // Creating an interval to detect popup window location change event
-                    var interval = setInterval(function () {
-                        if (loginWindow.closed) {
-                            // Clearing interval if popup was closed
-                            clearInterval(interval);
-                        } else {
-                            var loc = loginWindow.location.href;
-                            if (typeof loc !== 'undefined' && loc.indexOf(that.callbackURL) == 0) {
-                                loginWindow.close();
-                                that._sessionCallback(loc);
-                            }
+                    // As per http://docs.phonegap.com/en/2.3.0/cordova_inappbrowser_inappbrowser.md.html, 
+                    // now loadStart & loadStop events are supported, so moving to event listener rather than timer.
+                    loginWindow.addEventListener('loadstop', function(event) {                     
+                        var loc = event.url;
+                        if (typeof loc !== 'undefined' && loc.indexOf(that.callbackURL) == 0) {
+                            loginWindow.close();
+                            that._sessionCallback(loc);
                         }
-                    }, 250);
-
-                    loginWindow.focus();
+                    });
                 }
-
             } else if (window.plugins && window.plugins.childBrowser) { // This is PhoneGap/Cordova app
 
                 var childBrowser = window.plugins.childBrowser;
